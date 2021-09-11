@@ -7,17 +7,16 @@ import { useState } from 'react';
 
 function App() {
   const [bmi, setbmi] = useState(18)
-  const changeBmi = () =>{
-    setbmi(19)
-    console.log(bmi);
-  }
+  // const changeBmi = () =>{
+  //   setbmi(bmi +10)
+  //   console.log(bmi);
+  // }
   return (
     <>
     <div>BMI CALCULATOR</div>
-    <div>my Bmi is {bmi}</div>
-    <button onClick={changeBmi}>Click</button>
+    <button onClick={() => setbmi(bmi + 10)}>Click</button>
     <Form/>
-    <BmiScore/>
+    <BmiScore bmiNo={bmi}/>
     <BmiList/>
     </>
   );
