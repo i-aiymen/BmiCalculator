@@ -3,11 +3,12 @@ import './App.css';
 import Form from './components/Form';
 import BmiScore from './components/BmiScore'
 import BmiList from './components/BmiList'
+import { useState } from 'react';
 
 function App() {
-  let bmi = 18;
+  const [bmi, setbmi] = useState(18)
   const changeBmi = () =>{
-    bmi = 19;
+    setbmi(19)
     console.log(bmi);
   }
   return (
