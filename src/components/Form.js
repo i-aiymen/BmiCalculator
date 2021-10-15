@@ -11,7 +11,9 @@ function Form({ getdata }) {
       setalert(true);
     } else {
       getdata(weight, height);
-      setalert(false);
+      setalert((false));
+      setheight(" ");
+      setweight(" ");
       //   console.log(weight);
       //   console.log(height);
     }
