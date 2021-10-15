@@ -9,6 +9,7 @@ function App() {
     weight: "",
     type: "",
   });
+  const [show, setShow] = useState(false);
   const [bmi, setBmi] = useState("00");
   const [bmiType, setBmiType] = useState("Not calculated");
   const [bmiRange, setBmiRang] = useState({
@@ -35,6 +36,7 @@ function App() {
     };
     setBmiRang(range);
     setchangeWeight(weightChange(b, w, range));
+    setShow(true);
   };
 
   const calBmi = (w, h) => (w / (h * h)).toFixed(2);
@@ -82,6 +84,7 @@ function App() {
         <div className="row justify-content-center mt-5 mx-2">
           <Form getdata={onFormSub} />
         </div>
+        {show && (
         <div className="row justify-content-center mt-5">
           <div className=" col-12 col-sm-6 mb-5">
             <BmiScore
@@ -94,6 +97,7 @@ function App() {
             <BmiList range={bmiRange} bmi={bmi} />
           </div>
         </div>
+        )}
       </div>
     </>
   );
