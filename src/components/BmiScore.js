@@ -1,8 +1,10 @@
-function BmiScore(props) {
+function BmiScore({bmiNo,bmiName}) { 
     return (
         <div>
-            Bmi Score {props.bmiNo}
+            Bmi Score {bmiNo} <br/>
+            Bmi Type {bmiName}
         </div>
+        
     )
 }
 
