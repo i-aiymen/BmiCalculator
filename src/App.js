@@ -6,17 +6,16 @@ import BmiList from './components/BmiList'
 import { useState } from 'react';
 
 function App() {
-  const [bmi, setbmi] = useState(18)
+  const [bmi, setbmi] = useState("")
+  const [bmiType, setbmiType] = useState("")
   // const changeBmi = () =>{
   //   setbmi(bmi +10)
   //   console.log(bmi);
   // }
   return (
     <>
-    <div>BMI CALCULATOR</div>
-    <button onClick={() => setbmi(bmi + 10)}>Click</button>
     <Form/>
-    <BmiScore bmiNo={bmi}/>
+    <BmiScore bmiNo={bmi} bmiName={bmiType}/>
     <BmiList/>
     </>
   );
